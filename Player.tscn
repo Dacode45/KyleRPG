@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfpuh3wwnc05h"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_osnre"]
+[ext_resource type="Texture2D" uid="uid://bnvck248kpg8q" path="res://Assets/Male/Male_0_Idle0.png" id="2_quwi5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q086l"]
+radius = 47.86
+height = 133.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_osnre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q086l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -128)
+texture = ExtResource("2_quwi5")

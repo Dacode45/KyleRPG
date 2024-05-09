@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt0lojhotjox0"]
+
+[ext_resource type="Texture2D" uid="uid://c2pcbxob8pr3e" path="res://Assets/Isometric/barrels_E.png" id="5_jmanx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t2vtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sqr4"]
+size = Vector2(150, 150)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_t2vtb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6sqr4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, -165)
+texture = ExtResource("5_jmanx")
